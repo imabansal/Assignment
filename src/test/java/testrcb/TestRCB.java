@@ -8,6 +8,7 @@ import org.json.simple.parser.JSONParser;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.io.FileNotFoundException;
 //file reader imports 
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,14 +21,19 @@ import org.json.simple.JSONObject;
 
 public class TestRCB {
 	
-
 		static int wicketKeeperCount=0; 	//keeping count of number of wicketkeepers
 		static int foreginPlayersCount=0;	////keeping foreign players count
 		
-		public static void main(String args) throws IOException, org.json.simple.parser.ParseException{
+		public void setUp() {
 		
 			JSONParser jsonparser = new JSONParser();
-			FileReader reader = new FileReader(".\\schema.json");
+			FileReader reader-=null;
+			try {
+				reader = new FileReader(".\\schema.json");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			Object obj = jsonparser.parse(reader);
 			JSONObject jsonObj = (JSONObject)obj;
@@ -57,7 +63,7 @@ public class TestRCB {
 		}
 		
 		@Test
-		public void validateonlyFourForeignPlayers() {
+		public void verifyonlyFourForeignPlayers() {
 			
 			 SoftAssert softassert = new SoftAssert();
 			 softassert.assertEquals(foreginPlayersCount, 4);
@@ -65,7 +71,7 @@ public class TestRCB {
 		}
 		
 		@Test
-		public void validateonlyAtleastOneWicketKeeper() {
+		public void verifyonlyAtleastOneWicketKeeper() {
 			
 			 SoftAssert softassert = new SoftAssert();
 			 softassert.assertEquals(wicketKeeperCount, 1);
