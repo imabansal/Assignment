@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-31T16:48:26 IST" name="Suite" finished-at="2022-12-31T16:48:26 IST" duration-ms="121">
+  <suite started-at="2022-12-31T17:05:55 IST" name="Default suite" finished-at="2022-12-31T17:05:56 IST" duration-ms="101">
     <groups>
     </groups>
-    <test started-at="2022-12-31T16:48:26 IST" name="Test" finished-at="2022-12-31T16:48:26 IST" duration-ms="121">
+    <test started-at="2022-12-31T17:05:55 IST" name="Default test" finished-at="2022-12-31T17:05:56 IST" duration-ms="101">
       <class name="testrcb.TestRCB">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testrcb.TestRCB@5fbdfdcf]" started-at="2022-12-31T16:48:26 IST" name="setUp" finished-at="2022-12-31T16:48:26 IST" duration-ms="28" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testrcb.TestRCB@f736069]" started-at="2022-12-31T17:05:55 IST" name="setUp" finished-at="2022-12-31T17:05:55 IST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyonlyAtleastOneWicketKeeper()[pri:0, instance:testrcb.TestRCB@5fbdfdcf]" started-at="2022-12-31T16:48:26 IST" name="verifyonlyAtleastOneWicketKeeper" finished-at="2022-12-31T16:48:26 IST" duration-ms="24" status="PASS">
+        <test-method signature="verifyAtleastOneWicketKeeper()[pri:0, instance:testrcb.TestRCB@f736069]" started-at="2022-12-31T17:05:56 IST" name="verifyAtleastOneWicketKeeper" finished-at="2022-12-31T17:05:56 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyonlyAtleastOneWicketKeeper -->
-        <test-method signature="verifyonlyFourForeignPlayers()[pri:0, instance:testrcb.TestRCB@5fbdfdcf]" started-at="2022-12-31T16:48:26 IST" name="verifyonlyFourForeignPlayers" finished-at="2022-12-31T16:48:26 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- verifyAtleastOneWicketKeeper -->
+        <test-method signature="verifyOnlyFourForeignPlayers()[pri:0, instance:testrcb.TestRCB@f736069]" started-at="2022-12-31T17:05:56 IST" name="verifyOnlyFourForeignPlayers" finished-at="2022-12-31T17:05:56 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyonlyFourForeignPlayers -->
+        </test-method> <!-- verifyOnlyFourForeignPlayers -->
       </class> <!-- testrcb.TestRCB -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

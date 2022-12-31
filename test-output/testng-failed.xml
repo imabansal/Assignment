@@ -7,7 +7,6 @@
         <methods>
           <include name="verifyonlyAtleastOneWicketKeeper"/>
           <include name="setUp"/>
-          <include name="verifyonlyFourForeignPlayers"/>
         </methods>
       </class> <!-- testrcb.TestRCB -->
     </classes>

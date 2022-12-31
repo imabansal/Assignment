@@ -7,7 +7,7 @@ import org.json.simple.parser.ParseException;
 
 //testng and assertions
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 //file reader imports 
@@ -57,7 +57,7 @@ public class TestRCB {
 			
 			for(int i=0;i<playerArray.size();i++) {
 				JSONObject player = (JSONObject)playerArray.get(i);
-					if(player.get("role").equals("Wicket-Keeper")) { 
+					if(player.get("role").equals("Wicket-keeper")) { 
 					wicketKeeperCount++; //if role matches wicket-keeper, increase count
 					}
 					
@@ -70,22 +70,21 @@ public class TestRCB {
 		
 		
 		@Test //TestCase 1
-		public void verifyonlyFourForeignPlayers() {
+		public void verifyOnlyFourForeignPlayers() {
 			
-			 SoftAssert softassert = new SoftAssert();
-			 softassert.assertEquals(foreginPlayersCount, 4);
-			
+			 Assert.assertTrue(foreginPlayersCount==4); //throw assertion error if condition is not fulfilled
+			 System.out.println("foreginPlayersCount is "+ foreginPlayersCount);
 		}
 		
 		@Test //TestCase 2
-		public void verifyonlyAtleastOneWicketKeeper() {
+		public void verifyAtleastOneWicketKeeper() {
 			
-			 SoftAssert softassert = new SoftAssert();
-			 softassert.assertEquals(wicketKeeperCount, 1);
-			
+			 Assert.assertTrue(wicketKeeperCount>=1);  //throw assertion error if condition is not fulfilled
+			 System.out.println("wicketKeeperCount is "+ wicketKeeperCount);
+			}
+			 
 		}
-		
-		
-	}
+			
+	
 
 
