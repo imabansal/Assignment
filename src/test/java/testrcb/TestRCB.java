@@ -69,7 +69,7 @@ public class TestRCB {
 		}
 		
 		
-		@Test //Test1
+		@Test //TestCase 1
 		public void verifyonlyFourForeignPlayers() {
 			
 			 SoftAssert softassert = new SoftAssert();
@@ -77,7 +77,7 @@ public class TestRCB {
 			
 		}
 		
-		@Test //Test2
+		@Test //TestCase 2
 		public void verifyonlyAtleastOneWicketKeeper() {
 			
 			 SoftAssert softassert = new SoftAssert();
