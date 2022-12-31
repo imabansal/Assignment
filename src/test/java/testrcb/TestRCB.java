@@ -1,20 +1,17 @@
 //package
 package testrcb;
 
-//import json parser
+//import JSON parser
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 
 //testng and assertions
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeTest;
 
-
 //file reader imports 
 import java.io.FileReader;
-
 
 //import exceptions
 import java.io.IOException;
@@ -30,12 +27,14 @@ public class TestRCB {
 		static int foreginPlayersCount=0;	//keeping foreign players count
 		
 		@BeforeTest
+		//initial setup for reading json files and getting player array data.
 		public void setUp() {
 		
-			JSONParser jsonparser = new JSONParser();
-			FileReader reader = null;
+			//jsonparser object
+			JSONParser jsonparser = new JSONParser();  //json parser object
+			FileReader reader = null;	//file reader object
 			try {
-				reader = new FileReader(".\\schema.json");
+				reader = new FileReader(".\\src\\test\\resources\\schema.json"); //reading json file in try/catch block to handle exceptions
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -53,19 +52,20 @@ public class TestRCB {
 			}
 			
 			
-			JSONObject jsonObj = (JSONObject)obj;
-			JSONArray playerArray = (JSONArray)jsonObj.get("playerArray");
+			JSONObject jsonObj = (JSONObject)obj; //type casting to JSON Object
+			JSONArray playerArray = (JSONArray)jsonObj.get("player"); //getting json array
 			
 			for(int i=0;i<playerArray.size();i++) {
 				JSONObject player = (JSONObject)playerArray.get(i);
-					if(player.get("role").equals("Wicket-Keeper")) {
-					wicketKeeperCount++;
+					if(player.get("role").equals("Wicket-Keeper")) { 
+					wicketKeeperCount++; //if role matches wicket-keeper, increase count
 					}
 					
 					if(!player.get("country").equals("India")) {
-						foreginPlayersCount++;
+						foreginPlayersCount++; //if role matches foreign-players, increase count
 				}
-			}
+			} 
+			
 		}
 		
 		
